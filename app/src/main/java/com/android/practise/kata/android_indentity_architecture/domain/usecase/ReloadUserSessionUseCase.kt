@@ -1,0 +1,11 @@
+package com.android.practise.kata.android_indentity_architecture.domain.usecase
+
+import com.android.practise.kata.android_indentity_architecture.domain.model.UserSession
+import com.android.practise.kata.android_indentity_architecture.domain.repository.AuthRepository
+
+class ReloadUserSessionUseCase(
+    private val authRepository: AuthRepository,
+) {
+    suspend operator fun invoke(): Result<UserSession> =
+        authRepository.reloadUserSession()
+}
