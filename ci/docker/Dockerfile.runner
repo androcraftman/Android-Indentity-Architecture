@@ -16,7 +16,7 @@ RUN useradd -m -s /bin/bash runner && \
     usermod -aG sudo runner && \
     echo "%sudo ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
-ENV RUNNER_VERSION=2.321.0
+ENV RUNNER_VERSION=2.338.2
 
 WORKDIR /home/runner
 
